@@ -3,13 +3,35 @@ import heroImg from './assets/hero.png'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
+import Navbar from './components/Navbar/Navbar'
+import AlumnoCard from './components/AlumnoCard/AlumnoCard'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <h1>¡Hola Mundo!</h1>
+      <Navbar/>
+      <div className="contrainer">
+        <h2 className="mb-4">Directorio de Alumnos</h2>
+        <div className="row">
+      <AlumnoCard
+        nombre="Daniel Puccio"
+        carrera="Desarrollo de Software"
+        estado="Matriculado"
+        />
+      <AlumnoCard
+        nombre="Maria Perez"
+        carrera="Diseño Gráfico"
+        estado="Inactivo"
+        />
+      <AlumnoCard
+        nombre="Carlos Mendoza"
+        carrera="Administración Industrial"
+        estado="Matriculado"
+        />
+      </div>
+    </div>
     </>
   )
 }
